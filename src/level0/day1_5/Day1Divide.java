@@ -1,4 +1,4 @@
-package level0.day1;
+package level0.day1_5;
 
 public class Day1Divide     {
     public static int solution(int num1, int num2) {
