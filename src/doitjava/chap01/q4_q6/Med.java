@@ -1,5 +1,6 @@
 package doitjava.chap01.q4_q6;
 
+
 // 5번은 풀이문제가 아니러
 // 6번은 너무 간단해서 생략
 public class Med {
@@ -14,6 +15,7 @@ public class Med {
         // 다만 가운데값이 제일 클 경우는 abMax == acMax 가 되므로 따로 처리한다.
         int abMax = Math.max(a, b);
         int acMax = Math.max(b, c);
+
 
         // 만약 가운데값이 제일 커서 max1과 max2가 같다면
         if (abMax == acMax){
