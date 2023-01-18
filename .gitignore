@@ -8,5 +8,6 @@
 /httpRequests/
 
 .idea
-알리고즘.iml
+.gitignore
+*.iml
 out
