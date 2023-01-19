@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BinSearchTest {
     /**
      *  Q6. 검색 결과를 찾지 못한 경우 insertion point를 출력하라.
-     *      insertion point : key보다
+     *      insertion point : key보다 큰 가장 첫번째 원소
      *  Arrays.binarySearch() 메소드를 활용한다.
      */
     public static void main(String[] args) {

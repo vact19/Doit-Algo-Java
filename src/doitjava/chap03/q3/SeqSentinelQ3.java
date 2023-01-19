@@ -1,5 +1,10 @@
 package doitjava.chap03.q3;
 
+/**
+ * Q3. n의 length를 가진 배열 arr에서
+ * key와 일치하는 원소의 인덱스를 배열 idxes에 맨 앞부터 순서대로 저장하고,
+ * 일치한 원소의 수 (idxex.length) 를 반환
+ */
 public class SeqSentinelQ3 {
     static int seqSearchSen(int[] arr, int n, int key, int[] idxes){
         int i = 0; // 배열 arr를 순회하기 위함

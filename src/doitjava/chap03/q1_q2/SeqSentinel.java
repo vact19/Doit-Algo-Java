@@ -1,5 +1,8 @@
 package doitjava.chap03.q1_q2;
 
+/**
+ * Q1. for문을 사용해 순차검색 구현
+ */
 public class SeqSentinel {
     static int seqSearchSen(int[] arr, int n, int key){
         int i = 0;
