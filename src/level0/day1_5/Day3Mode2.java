@@ -18,7 +18,7 @@ public class Day3Mode2 {
         /**
          *  Map<숫자, 빈도수>를 활용한다.
          *  1. 배열을 모두 순회하며 Map에 등록한다. 숫자와 빈도수가 정리된 HashMap이 만들어진다.
-         *  2. keySet을 순회하며 가장 value가 높은 key를 찾는다.
+         *  2. EntrySet을 순회하며 가장 value가 높은 key를 찾는다.
 
          *      이 과정에서 중복된 최빈값도 찾는다.
              *  value가 일치한 경우, 해당 상황을 기억한다 (boolean flag = true).
@@ -30,18 +30,18 @@ public class Day3Mode2 {
             return array[0];
         }
 
-        // 1 ~ 2번
+        // 1. 배열 순회하여 Map에 등록
         for (int num : array) {
             // key에 등록된 값이 있으면 BiFunction을 실행한다. 없으면 등록한다. 가독성을 위해 Method Reference로 교체하지 않음
             map.merge(num, 1, (oldValue, newValue) -> oldValue + newValue);
         }
 
-        // 3 ~ 4번
+        // 2번을 위한 변수초기화
         int freq = 1; // 빈도수
         int key = array[0]; // 빈도수 freq만큼 일어난 key값. 배열 0번째로 초기화한다.
-        boolean flag = false; // 최빈값이 여러개일 경우 false.
+        boolean flag = false; // 최빈값이 여러개일 경우 true로 변환.
 
-        // 1-2, 2-2
+        // 2. entrySet을 순회하며 Value 값이 가장 높은 entry를 찾는다.
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             Integer value = entry.getValue();
             if (freq == value){ // 현재까지의 최대 빈도수와 같은 빈도수를 가진 Entry를 만났을 시
@@ -53,6 +53,8 @@ public class Day3Mode2 {
                 flag = false;
             }
         }
+
+        // 최빈값이 여러개일 경우는 flag true
         if (flag){
             return -1;
         }
