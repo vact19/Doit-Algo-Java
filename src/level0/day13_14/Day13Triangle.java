@@ -11,11 +11,12 @@ import java.util.Arrays;
  * 세 변으로 삼각형을 만들 수 있다면 1, 만들 수 없다면 2를 return하도록 solution 함수를 완성해주세요.
  */
 public class Day13Triangle {
+    // 삼각형 만들 수 있으면 1, 없으면 2 반환
     public static int solution(int[] sides) {
         int max = Arrays.stream(sides).max().getAsInt();
         int sum = Arrays.stream(sides).sum();
 
-        return sum - max >= max ? 1 : 2; // sum - max 는 다른 두 변의 길이의 합
+        return max >= sum - max ? 2 : 1; // sum - max 는 다른 두 변의 길이의 합
     }
     public static void main(String[] args) {
             System.out.println(solution(new int[]{1, 2, 3}));
