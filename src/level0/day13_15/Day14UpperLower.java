@@ -1,4 +1,4 @@
-package level0.day13_14;
+package level0.day13_15;
 
 /** 대문자와 소문자
  *

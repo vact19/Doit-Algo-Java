@@ -1,4 +1,4 @@
-package level0.day13_14;
+package level0.day13_15;
 
 public class Day14Ciper {
     public static String solution(String cipher, int code) {
