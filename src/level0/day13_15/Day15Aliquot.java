@@ -22,6 +22,7 @@ public class Day15Aliquot {
                 }
             }
         }
+
         return list.stream().sorted().mapToInt(Integer::intValue).toArray();
     }
 
