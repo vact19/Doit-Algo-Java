@@ -13,9 +13,8 @@ public class 올바른괄호 {
     static boolean solution(String s) {
         char[] charArray = s.toCharArray();
 
-        //
-        int left = 0;
-        int right = 0;
+        int left = 0; // 왼쪽 괄호
+        int right = 0; // 오른쪽 괄호
 
         for (char bracket : charArray) {
             if (bracket == '(')
@@ -24,10 +23,10 @@ public class 올바른괄호 {
                 right++;
 
             // 매 반복마다 검사해야 함.
-            if (left < right)
+            if (left < right) // 닫는 괄호가 더 많은 순간이 있다면 올바른 괄호가 아님.
                 return false;
         }
-        return left == right;
+        return left == right; // 괄호가 올바르게 닫혔는지
     }
 
     public static void main(String[] args) {
