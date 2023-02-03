@@ -12,7 +12,6 @@ package level2.p12909;
 public class 올바른괄호 {
     static boolean solution(String s) {
         char[] charArray = s.toCharArray();
-
         int left = 0; // 왼쪽 괄호
         int right = 0; // 오른쪽 괄호
 

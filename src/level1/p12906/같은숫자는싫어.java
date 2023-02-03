@@ -23,9 +23,9 @@ public class 같은숫자는싫어 {
 
         // 1부터 반복 시작
         for (int i =1; i < arr.length; i+=1){
-            if (stack.peek() == arr[i]){}
-            else
+            if (stack.peek() != arr[i])
                 stack.push(arr[i]);
+            // 스택의 top과 arr[i]가 같으면 아무것도 하지 않는다.
         }
 
         //int는 Generic 불가. 그래서 배열로 변환하는 stack.toArray(T[] a) 사용 불가

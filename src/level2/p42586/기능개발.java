@@ -22,11 +22,9 @@ import java.util.List;
 public class 기능개발 {
     public static int[] solution(int[] progresses, int[] speeds) {
         // (100 - 진도) / 속도
-        // (100 - 진도) % 속도가 0이 아니면 1을 더함.
-        // 그게 완성까지의 소요일임
+        // (100 - 진도) % 속도가 0이 아니면 1을 더함. 그게 완성까지의 소요일임
 
         // 첫번째 작업의 완성 소요일 * 속도를 작업에 모두 더함
-
         /**
          *   작업 배열 원소 전체에 대해서 반복할 필요는 없다. 첫 배포 시 뒤에 있는 5개의 작업이 같이 배포된다면,
          *   포인터 값을 5 증가시켜서 뒤의 5작업은 건너뛴다.
@@ -77,7 +75,6 @@ public class 기능개발 {
         }
 
         return list.stream().mapToInt(Integer::intValue).toArray();
-
     }
     
     public static void main(String[] args) {
