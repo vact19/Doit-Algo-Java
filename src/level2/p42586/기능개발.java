@@ -32,7 +32,7 @@ public class 기능개발 {
         // 포인터를 하나 두고,
         // 1. 현재 포인터 작업 완성
         // 2. 현재 포인터의 바로 뒷칸도 완료되었는지 확인.
-        // 3. 2번 작업을 반복하면서, 한 번 배포할 때 몇 개의 기능을 배포할 수 있는지 cnt++
+        // 3. 2번 작업을 반복하면서, 한 번 배포할 때 몇 개의 기능을 배포할 수 있는지 deployedFeats++
         int ptr = 0;
         int days = 0;
         int deployedFeats = 0;
@@ -58,6 +58,7 @@ public class 기능개발 {
 
             System.out.println(Arrays.toString(progresses));
 
+            // 한 번에 몇 개가 배포 가능한지 검사
             while (true){
                 if (ptr + deployedFeats >= progresses.length)
                     break;
